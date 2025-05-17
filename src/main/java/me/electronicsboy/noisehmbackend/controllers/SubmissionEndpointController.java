@@ -21,7 +21,7 @@ public class SubmissionEndpointController {
 	}
     
     @PostMapping("/submitlatlongnoisedb")
-    @RateLimited(limit=10)
+    @RateLimited(limit=1000)
     public ResponseEntity<NoiseMeasurement> handleSubmission(@RequestBody NoiseLevelSubmissionDto noiseLevelSubmissionDto) {
     	NoiseMeasurement nm = noiseservice.saveMeasurement(noiseLevelSubmissionDto.getLatitude(), noiseLevelSubmissionDto.getLongitude(), noiseLevelSubmissionDto.getNoiselevel());
         return ResponseEntity.ok(nm);
