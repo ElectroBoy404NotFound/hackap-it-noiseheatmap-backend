@@ -19,6 +19,7 @@ public class NoiseMeasurement {
     private double latitude;
     private double longitude;
     private double noiseLevel;
+    private int type;
 
     @Column(nullable = false, updatable = false)
     private Instant recordedAt = Instant.now();
@@ -61,5 +62,13 @@ public class NoiseMeasurement {
 
 	public void setRecordedAt(Instant recordedAt) {
 		this.recordedAt = recordedAt;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
 	}
 }

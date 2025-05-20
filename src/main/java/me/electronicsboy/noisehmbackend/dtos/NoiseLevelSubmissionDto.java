@@ -4,6 +4,7 @@ public class NoiseLevelSubmissionDto {
 	private double latitude;
 	private double longitude;
 	private double noiselevel;
+	private int noiseType;
 	
 	public double getLatitude() {
 		return latitude;
@@ -22,5 +23,11 @@ public class NoiseLevelSubmissionDto {
 	}
 	public void setNoiselevel(double noiselevel) {
 		this.noiselevel = noiselevel;
+	}
+	public int getNoiseType() {
+		return noiseType;
+	}
+	public void setNoiseType(int noiseType) {
+		this.noiseType = noiseType;
 	}
 }
